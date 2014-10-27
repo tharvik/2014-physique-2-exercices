@@ -1,0 +1,178 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.png}
+
+\begin{document}
+
+\title{Physique g\'en\'erale II\\
+Problem set 5}
+\author{Some random guy}
+\maketitle
+
+\section{Fields in space}
+
+\section{A wire above the ground}
+\[
+	\int_S \vec{E} \cdot \vec{ds} = \frac{Q}{\epsilon_0}
+\]
+\[
+	V = - \int_{r_b}^{r_a} \vec{E} \vec{dr}
+\]
+\[
+	C = \frac{Q}{V}
+\]
+\(l\) is the consider length of wire.
+\[
+	Q = \lambda l
+\]
+We take a cylinder around the wire.
+\[
+	\int_S \vec{E} \cdot \vec{ds} = \frac{Q}{\epsilon_0}
+	\to E 2 \pi a l = \frac{\lambda l}{\epsilon_0}
+	\to E = \frac{\lambda}{\epsilon_0 2 \pi a}
+\]
+We compute the potential difference with the zero at the ground.
+\[
+	V = - \int_{r_b}^{r_a} \vec{E} \vec{dr}
+	= - \int_{h}^{0} \frac{\lambda}{\epsilon_0 2 \pi a} \vec{dr}
+	= - \frac{\lambda}{\epsilon_0 2 \pi a} \int_{h}^{0} \vec{dr}
+	= \frac{\lambda h}{\epsilon_0 2 \pi a}
+\]
+We now have the capacity.
+\[
+	C = \frac{Q}{V}
+	= \frac{l \epsilon_0 2 \pi a}{h}
+\]
+
+\section{Capacitors}
+
+\[
+	C = \frac{Q}{V}
+\]
+\[
+	\sigma = \frac{Q}{S}
+\]
+\[
+	E = \frac{\sigma}{\epsilon_0} = \frac{Q}{\epsilon_0 S}
+\]
+If there is two fields to consider with different \(S\), \(d\) and \(\epsilon\)
+\[
+	E_1 = \frac{Q}{\epsilon_{r1} \epsilon_0 S_1}
+	\to \Delta V_1 = E_1 d_1 = \frac{Q d_1}{\epsilon_{r1} \epsilon_0 S_1}
+	\to C_1 = \frac{\epsilon_{r1} \epsilon_0 S_1}{d_1}
+\]
+\[
+	E_2 = \frac{Q}{\epsilon_{r2} \epsilon_0 S_2}
+	\to \Delta V_2 = E_2 d_2 = \frac{Q d_2}{\epsilon_{r2} \epsilon_0 S_2}
+	\to C_2 = \frac{\epsilon_{r2} \epsilon_0 S_2}{d_2}
+\]
+If it is in parallel, we add the two capacities
+\[
+	C = C_1 + C_2 = \epsilon_0
+	( \frac{\epsilon_{r1} S_1}{d_1} + \frac{\epsilon_{r2} S_2}{d_2} )
+\]
+If it is in serie, we add the two inverses of capacities
+\[
+	\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+	= \frac{1}{\epsilon_0}
+	( \frac{d_1}{\epsilon_{r1} S_1} +
+	\frac{d_2}{\epsilon_{r2} S_2} )
+\]
+
+\subsection{a}
+\[
+	d_1 = d
+\]
+\[
+	d_2 = 0
+\]
+\[
+	S_1 = S
+\]
+\[
+	S_2 = 0
+\]
+\[
+	\epsilon_{r1} = 1
+\]
+\[
+	\epsilon_{r2} = 0
+\]
+\[
+	C = C_1 + C_2 = \epsilon_0 \frac{S}{d}
+\]
+\[
+	\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+	= \frac{d}{S \epsilon_0}
+	\to C = \epsilon_0 \frac{S}{d}
+\]
+
+\subsection{b}
+It is in serie
+\[
+	d_1 = \frac{1}{3} d
+\]
+\[
+	d_2 = \frac{2}{3} d
+\]
+\[
+	S_1 = S_2 = S
+\]
+\[
+	C = \epsilon_0
+	( \frac{\epsilon_{r1} S}{\frac{1}{3} d} +
+	\frac{\epsilon_{r2} S}{\frac{2}{3} d} )
+	= \frac{3 \epsilon_0 S}{d}
+	( \epsilon_{r1} + \frac{\epsilon_{r2}}{2} )
+	// TODO inverse sides
+\]
+
+\subsection{c}
+It is in parallel
+\[
+	d_1 = d_2 = d
+\]
+\[
+	S_1 = \frac{1}{3} S
+\]
+\[
+	S_2 = \frac{2}{3} S
+\]
+\[
+	\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+	= \frac{1}{\epsilon_0}
+	( \frac{d}{\epsilon_{r1} \frac{1}{3}} +
+	\frac{d}{\epsilon_{r2} \frac{2}{3}} )
+	= \frac{3 d}{\epsilon_0}
+	( \frac{1}{\epsilon_{r1}} +
+	\frac{1}{2 \epsilon_{r2}} )
+	= \frac{3 d}{\epsilon_0}
+	\frac{2 \epsilon_{r2} + \epsilon_{r1}}{\epsilon_{r1} \epsilon_{r2}}
+	\to C = \frac{\epsilon_0}{3 d}
+	\frac{\epsilon_{r1} \epsilon_{r2}}{2 \epsilon_{r2} + \epsilon_{r1}}
+	// TODO inverse sides
+\]
+
+\subsection{d}
+It is in parallel
+\[
+	d_1 = d_2 = d
+\]
+\[
+	S_1 = \frac{1}{3} S
+\]
+\[
+	S_2 = \frac{2}{3} S
+\]
+\[
+	\epsilon_{r1} = 1
+\]
+\[
+	\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+	\to C = \frac{\epsilon_0}{3 d}
+	\frac{\epsilon_{r2}}{2 \epsilon_{r2} + 1}
+	// TODO inverse sides
+\]
+
+\end{document}
