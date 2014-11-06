@@ -108,12 +108,15 @@ It is in serie
 	S_1 = S_2 = S
 \]
 \[
-	C = \epsilon_0
-	( \frac{\epsilon_{r1} S}{\frac{1}{3} d} +
-	\frac{\epsilon_{r2} S}{\frac{2}{3} d} )
-	= \frac{3 \epsilon_0 S}{d}
-	( \epsilon_{r1} + \frac{\epsilon_{r2}}{2} )
-	// TODO inverse sides
+	\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+	= \frac{1}{\epsilon_0}
+	( \frac{\frac{1}{3} d}{\epsilon_{r1} S} +
+	\frac{\frac{2}{3} d}{\epsilon_{r2} S} )
+	= \frac{3d}{S \epsilon_0}
+	( \frac{1}{\epsilon_{r1}} +
+	\frac{2}{\epsilon_{r2}} )
+	\to C = \frac{S \epsilon_0}{3 d}
+	\frac{\epsilon_{r1} \epsilon_{r2}}{\epsilon_{r2} + 2 \epsilon_{r1}}
 \]
 
 \subsubsection{c}
@@ -128,18 +131,8 @@ It is in parallel
 	S_2 = \frac{2}{3} S
 \]
 \[
-	\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
-	= \frac{1}{\epsilon_0}
-	( \frac{d}{\epsilon_{r1} \frac{1}{3}} +
-	\frac{d}{\epsilon_{r2} \frac{2}{3}} )
-	= \frac{3 d}{\epsilon_0}
-	( \frac{1}{\epsilon_{r1}} +
-	\frac{1}{2 \epsilon_{r2}} )
-	= \frac{3 d}{\epsilon_0}
-	\frac{2 \epsilon_{r2} + \epsilon_{r1}}{\epsilon_{r1} \epsilon_{r2}}
-	\to C = \frac{\epsilon_0}{3 d}
-	\frac{\epsilon_{r1} \epsilon_{r2}}{2 \epsilon_{r2} + \epsilon_{r1}}
-	// TODO inverse sides
+	C = C_1 + C_2 = \frac{S \epsilon_0}{3 d}
+	( \epsilon_{r1} + 2 \epsilon_{r2} )
 \]
 
 \subsubsection{d}
@@ -157,8 +150,6 @@ It is in parallel
 	\epsilon_{r1} = 1
 \]
 \[
-	\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
-	\to C = \frac{\epsilon_0}{3 d}
-	\frac{\epsilon_{r2}}{2 \epsilon_{r2} + 1}
-	// TODO inverse sides
+	C = C_1 + C_2 = \frac{S \epsilon_0}{3 d}
+	( 1 + 2 \epsilon_{r2} )
 \]
