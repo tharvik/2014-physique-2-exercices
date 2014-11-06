@@ -1,5 +1,7 @@
 \documentclass{article}
 
+\usepackage{color}
+
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.png}
 
@@ -8,6 +10,12 @@
 	\input{tex/ps#1}
 	\pagebreak
 }
+
+\newcommand{\todo}[1] {
+	{\color{red} TODO: \emph{#1}}
+}
+
+\newcommand{\unit}[1] {\rm{[#1]}}
 
 \begin{document}
 

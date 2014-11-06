@@ -1,0 +1,180 @@
+\subsection{Flash}
+
+\[Q = \int_t I(t) dt \unit{C}\]
+\[e = - 1.602 \cdot 10^{-19} \unit{C}\]
+
+\subsubsection{a}
+
+\[T	=   0.01 \unit{s}\]
+\[A_-	=  20000 \unit{A}\]
+\[A_+	= 300000 \unit{A}\]
+positive
+\[
+	Q_+ = \int_t I(t) dt
+	\to Q_+ = \int_0^{T} A_+ dt
+	= A_+ \int_0^{T} dt
+	= A_+ \cdot T = 300000 \cdot 0.01 = 3000 \unit{C}
+\]
+negative
+\[
+	Q_- = \int_t I(t) dt
+	\to Q_- = \int_0^{T} A_- dt
+	= A_- \int_0^{T} dt
+	= A_- \cdot T = 20000 \cdot 0.01 = 200 \unit{C}
+\]
+
+\subsubsection{b}
+\[\Delta e = \frac{Q \unit{C}}{e \unit{C}}\]
+positive
+\[
+	\Delta e = \frac{Q_+}{e}
+	\to \Delta e = \frac{Q_+}{e}
+	= \frac{3000}{- 1.602 \cdot 10^{-19}}
+	\approx - 1.872 \cdot 10^{22}
+\]
+negative
+\[
+	\Delta e = \frac{Q_-}{e}
+	\to \Delta e = \frac{Q_-}{e}
+	= \frac{200}{- 1.602 \cdot 10^{-19}}
+	\approx - 1.248 \cdot 10^{21}
+\]
+
+\subsection{Current}
+
+\[Q = \int_t I(t) dt \unit{C}\]
+\[e = - 1.602 \cdot 10^{-19} \unit{C}\]
+
+\subsubsection{a}
+
+\[I(t) 0.45 \cdot \sin(\pi t) + 0.5 \unit{A}\]
+
+\[
+	Q = \int_t I(t) dt \unit{C}
+	\to Q	= \int_0^T (0.45 \cdot \sin(\pi t) + 0.5) dt
+	= 0.45 \int_0^T \sin(\pi t) dt + 0.5 \int_0^T dt
+\]
+\[
+	Q = 0.45 [ - cos(\pi t) ]_0^T + 0.5 T
+	= - 0.45 ( cos(\pi T) - 1) + 0.5 T
+	= 0.5 T - 0.45 ( cos(\pi T) - 1) \unit{C}
+\]
+
+\subsubsection{b}
+
+\[\Delta e = \frac{Q \unit{C}}{e \unit{C}}\]
+\[T = 12.5 \unit{s}\]
+\todo{using radian, is incorrect but arguable}
+\[
+	Q = 0.5 T - 0.45 ( cos(\pi T) - 1)
+	\to Q = 0.5 \cdot 12.5 - 0.45 ( cos(12.5 \cdot \pi) - 1)
+	\approx 6.7 \unit{C}
+\]
+\[
+	\Delta e = \frac{Q \unit{C}}{e \unit{C}}
+	\to \Delta e \approx \frac{- 6.7}{- 1.602 \cdot 10^{-19}}
+	\approx 4.182 \cdot 10^{19}
+\]
+\todo{I do not quite get how they obtains \(9 \cdot 10^{19}\)}
+
+\subsection{Charge Density}
+
+\[\mu \unit{C/m^2} = \oint_{(x,y)} \frac{\rho(x,y)}{xy} d(x,y) \unit{C}\]
+
+\subsubsection{a}
+\[L_x	= 60 \unit{cm}	= 6 \cdot 10^{-1} \unit{m}\]
+\[L_y	= 50 \unit{cm}	= 5 \cdot 10^{-1} \unit{m}\]
+\[\rho(x,y) = x^2 + y^3 \unit{C} \]
+\[
+	\mu \unit{C/m^2} = \oint_{(x,y)} \frac{\rho(x,y)}{xy}d(x,y) \unit{C}
+	\to \mu = \int_0^{L_x} \int_0^{L_y} \frac{x^2 + y^3}{L_x L_y} dy dx
+\]
+\[
+	\mu = \frac{1}{L_x L_y} \left ( \int_0^{L_x} \int_0^{L_y} x^2 dy dx
+	+ \int_0^{L_x} \int_0^{L_y} y^3 dy dx \right )
+\]
+\[
+	\mu= \frac{1}{L_x L_y} \left ( \int_0^{L_x} x^2 dx \int_0^{L_y} dy
+	+ \int_0^{L_x} dx \int_0^{L_y} y^3 dy \right )
+\]
+\[
+	\mu = \frac{1}{L_x L_y} \left ( L_y \int_0^{L_x} x^2 dx
+	+ L_x \int_0^{L_y} y^3 dy \right )
+	= \frac{1}{L_x L_y} \left ( L_y \left [ \frac{x^3}{3} \right ]_0^{L_x}
+	+ L_x \left [ \frac{y^4}{4} \right ]_0^{L_y} \right )
+\]
+\[
+	\mu = \frac{1}{L_x L_y} \left ( \frac{L_y \cdot L_x^3}{3}
+	+ \frac{L_x \cdot L_y^4}{4} \right )
+	= \frac{L_x^2}{3} + \frac{L_y^3}{4}
+	= 1.5125 \cdot 10^{-1} \unit{C/m^2}
+\]
+\todo{the result is wrong regarding corrections, seem to be imprecision}
+
+\subsubsection{b}
+
+\[\rho(r) =  e^r \unit{C} \]
+\[
+	\mu \unit{C/m^2} = \oint_{(x,y)} \frac{\rho(x,y)}{xy} d(x,y) \unit{C}
+	\to \mu = \int_0^R \frac{e^r}{\pi R^2} dr
+	= \frac{1}{\pi R^2} \int_0^R e^r dr
+\]
+\[
+	\mu = \frac{1}{\pi R^2} [e^r]_0^R
+	= \frac{1}{\pi R^2} (e^R - 1)
+	= \frac{e^R - 1}{\pi R^2}
+\]
+\todo{Why is this wrong? \(\rho\) represent a single point and not a circle?}
+
+\subsection{Rowland Experiment}
+
+\[D = 30 \unit{cm} = 0.3 \unit{m}\]
+
+\subsubsection{a}
+
+\[\lambda \unit{C/m} = \frac{Q \unit{C}}{L \unit{m}}\]
+\[Q = 5 \unit{C}\]
+
+\[
+	L = 2 \pi \frac{D}{2}
+	= 0.3 \pi \approx 9.425 \cdot 10^-1 \unit{m}
+\]
+\[
+	\lambda \unit{C/m} = \frac{Q \unit{C}}{L \unit{m}}
+	\to \lambda = \frac{Q}{L} \approx \frac{5}{9.425 \cdot 10^{-1}}
+	\approx 5.305 \unit{C/m}
+\]
+
+\subsubsection{b}
+
+\newcommand{\exonefourtwo}[2] {
+	\(n = #1 \unit{Hz}\)
+	\[
+		I = Q n \to I = 5 \cdot #1 = #2
+	\]
+}
+
+\[I \unit{C/s} = \frac{\partial Q}{\partial t}\]
+\(n = n \unit{Hz}\)
+\[
+	\textrm{Temps par tour} = 1 / n
+	\to I = \frac{Q}{\textrm{Temps par tour}} = \frac{Q}{1/n} = Q n
+\]
+\exonefourtwo{0.5}{2.5}
+\exonefourtwo{1}{5}
+\exonefourtwo{2}{10}
+\exonefourtwo{5}{25}
+
+\todo{Use gnuplot to generated latex and then, include it}
+
+\setlength{\unitlength}{5cm}
+\begin{picture}(1,1)
+	\put(0,0){\line(0,1){1}}
+	\put(0,0){\line(1,0){1}}
+	\put(0,0){\line(1,1){1}}
+\end{picture}
+
+\subsubsection{c}
+\subsubsection{d}
+
+\subsection{Electrolysis}
